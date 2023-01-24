@@ -19,16 +19,16 @@ main {
   gap: 2em;
 }
 
-.title {
+.pageTitle {
   grid-area: title;
 }
 
-.title button {
+.pageTitle button {
   border: none;
   background: none;
 }
 
-.title button a {
+.pageTitle button a {
   font-size: 14px;
   color: black;
   text-decoration: none;
@@ -37,10 +37,30 @@ main {
 .shoes {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 .shoes > img {
   width: 20%;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.description ul li {
+  list-style-type: none;
+  padding: 0.5em 0;
+}
+
+#btnAdd button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+  text-decoration: underline;
 }
 
 /* SECTION ARTICLES */
