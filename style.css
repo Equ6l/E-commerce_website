@@ -99,7 +99,7 @@ main {
   grid-template-areas:
     "title title panier"
     "articles articles panier"
-    "articles articles panier";
+    "articles articles .";
   gap: 3em;
 }
 
