@@ -62,9 +62,13 @@
             <!-- SECTION PANIER -->
             <section id="panier">
                 <h2>Mon panier (3)</h2>
+                <div class="contentbasket">
                 <div>
-                    Crocs Clog Awake <br />
-                    59,99€ <br />
+                    <div class="article">
+                    <span class="productname">Crocs Clog Awake</span>
+                    <span class="price">59,99€</span>
+                    </div>
+                    <div class="number-delete">
                     <select name="quantity" id="quantity">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -72,11 +76,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <button type="#"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
+                </div>
                 </div>
                 <div>
-                    Lacoste Twin Serve <br />
-                    104,99€ <br />
+                    <div class="article">
+                    <span class="productname">Lacoste Twin Serve</span>
+                    <span class="price">104,99€</span>
+                    </div>
+                    <div class="number-delete">
                     <select name="quantity" id="quantity">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -84,11 +92,15 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <button type="#"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="buttondelete" type="#"><ion-icon name="trash-outline"></ion-icon></button>
+                </div>
                 </div>
                 <div>
-                    Nike Air Force 1 '07Nike Air Force 1 '07 <br />
-                    119,99€ <br />
+                    <div class="article">
+                    <span class="productname">Nike Air Force 1 '07Nike Air Force 1 '07</span>
+                    <span class="price">119,99€</span>
+                </div>
+                <div class="number-delete">
                     <select name="quantity" id="quantity">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -96,16 +108,18 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <button type="#"><ion-icon name="trash-outline"></ion-icon></button>
+                    <button class="buttondelete" type="#"><ion-icon name="trash-outline"></ion-icon></button>
                 </div>
-                <div class="global">
-                    <div id="line"></div>
+                </div>
+            </div>
+                <div id="infosprix">
                     <div>Sous-total <span>284,97</span></div>
                     <div>Transports <span>Gratuit</span></div>
                     <div>Taxes TVA <span>57€ (20%)</span></div>
                     <div>Total <span>341,97€</span></div>
                 </div>
-                <button type="#">Payer maintenant</button>
+
+                <button ditype="#">Payer maintenant</button>
             </section>
         </main>
         <script src="index.js"></script>

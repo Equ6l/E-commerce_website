@@ -116,5 +116,74 @@ section#articles {
 
 /* SECTION PANIER */
 section#panier {
+  background-color: rgb(240, 240, 240);
   grid-area: panier;
+}
+
+section#panier h2 {
+  margin: 10px;
+  padding: 10px;
+}
+
+section#panier div.contentbasket {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 1px solid black;
+}
+
+section#panier span.productname {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+section#panier span.price {
+  font-weight: bold;
+}
+
+.productname {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-delete {
+  display: flex;
+  justify-content: space-between;
+}
+
+#infosprix {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+#infosprix > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#infosprix > div:nth-child(4) {
+  font-weight: bold;
+}
+
+
+
+#panier > button {
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 3.5em;
+  text-transform: uppercase;
+}
+
+.buttondelete {
+  color: red;
+  background:none;
+  border: none;
+  font-size: 15px;
 }
