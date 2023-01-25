@@ -120,19 +120,26 @@ function displayCart() {
   displayTotalAmount();
 }
 
+
+// Addition des prix
+
+
 function displayTotalAmount() {
   let titre = document.querySelector("#panier h2");
   titre.textContent = "Mon panier " + "(" + cart.length + ")";
 
-  let total = document.querySelector("#infosprix div");
+  let soustotal = document.querySelector("#infosprix span");
   let sum = 0;
 
   for(let i = 0; i < cart.length; i++){
     sum = cart[i].price + sum;
   }
   
-  total.textContent = sum + "€";
+  soustotal.textContent = sum + "€";
   }
+
+  let tva = document.querySelector("");
+  
 }
 
 // DELETE PRODUCT
