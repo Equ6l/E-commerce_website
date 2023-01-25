@@ -83,18 +83,20 @@ function displayAvailableProducts() {
 // ADD PRODUCT
 function addProductToCart(productId) {
   cart.push(availableProducts[productId]);
-  displayCart(productId);
+  displayCart();
 }
 
 // DISPLAY CART
-function displayCart(productId) {
+function displayCart() {
   let panierSection = document.querySelector(".contentbasket");
-  let templatePanier = document.createElement("div");
-  templatePanier.innerHTML = `
+  panierSection.innerHTML = ""
+  for( let i = 0; i < cart.length; i++) {
+    let templatePanier = document.createElement("div");
+    templatePanier.innerHTML = `
     <div>
       <div class="article">
-        <span class="productname">${availableProducts[productId].name}</span>
-        <span class="price">${availableProducts[productId].price}€</span>
+        <span class="productname">${cart[i].name}</span>
+        <span class="price">${cart[i].price}€</span>
       </div>
       <div class="number-delete">
       <select name="quantity" id="quantity">
@@ -104,7 +106,15 @@ function displayCart(productId) {
           <option value="4">4</option>
           <option value="5">5</option>
       </select>
-      <button class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
+      <button onclick="removeProductFromCart(${i})" class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
     </div>`;
-  panierSection.append(templatePanier);
+    panierSection.append(templatePanier);
+  }
+  
+}
+
+// DELETE PRODUCT
+function removeProductFromCart(productId) {
+  cart.splice(productId,1)
+  displayCart();
 }
