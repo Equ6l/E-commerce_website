@@ -82,7 +82,15 @@ function displayAvailableProducts() {
 
 // ADD PRODUCT
 function addProductToCart(productId) {
-  cart.push(availableProducts[productId]);
+  let product = availableProducts[productId];
+  if (cart.findIndex(productId)) {
+    /* Si le produit n'est pas dans le panier*/
+    //   product.nb = 1;
+    //   return
+    //   cart.push(product);
+    // } else {
+  }
+
   displayCart(productId);
 }
 
