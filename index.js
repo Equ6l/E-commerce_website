@@ -107,4 +107,19 @@ function displayCart(productId) {
       <button class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
     </div>`;
   panierSection.append(templatePanier);
+  displayTotalAmount();
+}
+
+function displayTotalAmount() {
+  let titre = document.querySelector("#panier h2");
+  titre.textContent = "Mon panier " + "(" + cart.length + ")";
+
+  let total = document.querySelector("#infosprix div");
+  let sum = 0;
+
+  for(let i = 0; i < cart.length; i++){
+    sum = cart[i].price + sum;
+  }
+  
+  total.textContent = sum + "€";
 }
