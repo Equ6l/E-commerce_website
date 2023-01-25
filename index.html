@@ -8,7 +8,7 @@
     <title>Shoes</title>
 </head>
 
-<body>
+<body onload="displayAvailableProducts() ">
     <!-- NAVIGATION -->
     <nav>
         <img src="img/logoShoes.png" id="" alt="logo" />
@@ -18,7 +18,7 @@
             <li><a href="#">Enfant</a></li>
             <div id="icon">
                 <ion-icon name="search-outline"></ion-icon>
-                <input type="text" name="research" id="research"/>
+                <input type="text" name="research" id="research" />
             </div>
             <ion-icon name="basket-outline"></ion-icon>
         </ul>
@@ -32,158 +32,24 @@
                 <button type="button"><a href="">&#60; Retour</a></button>
                 <h2>Sneakers</h2>
             </div>
-            <section id="articles">
-                <div class="shoes">
-                    <img src="./img/crocs" alt="Crocs" />
-                    <div class="infos">
-                        <div class="title">
-                            <p>RF053</p>
-                            <h4>CLASSIC UNISEX - Mules</h4>
-                        </div>
-                        <div class="description">
-                            <ul>
-                                <li>Taille : 42</li>
-                                <li>Couleur : Noir</li>
-                                <li>Composition 100%</li>
-                            </ul>
-                        </div>
-                        <div id="btnAdd">
-                            <button type="button">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="quantity_price">
-                        <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <p><b>59,99€</b></p>
-                    </div>
-                </div>
-                <div class="shoes">
-                    <img src="./img/nikeAir" alt="Crocs" />
-                    <div class="infos">
-                        <div class="title">
-                            <p>RF293</p>
-                            <h4>Nike Air Force 1</h4>
-                        </div>
-                        <div class="description">
-                            <ul>
-                                <li>Taille : 42</li>
-                                <li>Couleur : Blanc</li>
-                                <li>Composition 100%</li>
-                            </ul>
-                        </div>
-                        <div id="btnAdd">
-                            <button type="button">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="quantity_price">
-                        <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <p><b>119,99€</b></p>
-                    </div>
-                </div>
-                <div class="shoes">
-                    <img src="./img/lacoste" alt="Crocs" />
-                    <div class="infos">
-                        <div class="title">
-                            <p>RF368</p>
-                            <h4>Lacoste Twin Serve</h4>
-                        </div>
-                        <div class="description">
-                            <ul>
-                                <li>Taille : 42</li>
-                                <li>Couleur : Blanc</li>
-                                <li>Composition 100%</li>
-                            </ul>
-                        </div>
-                        <div id="btnAdd">
-                            <button type="button">Ajouter au panier</button>
-                        </div>
-                    </div>
-                    <div class="quantity_price">
-                        <select name="quantity" id="quantity">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <p><b>104,99€</b></p>
-                    </div>
-                </div>
-            </section>
+            <section id="articles"></section>
             <!-- SECTION PANIER -->
             <section id="panier">
-                <h2>Mon panier (3)</h2>
-                <div class="contentbasket">
-                <div>
-                    <div class="article">
-                    <span class="productname">Crocs Clog Awake</span>
-                    <span class="price">59,99€</span>
-                    </div>
-                    <div class="number-delete">
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
-                </div>
-                </div>
-                <div>
-                    <div class="article">
-                    <span class="productname">Lacoste Twin Serve</span>
-                    <span class="price">104,99€</span>
-                    </div>
-                    <div class="number-delete">
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button class="buttondelete" type="#"><ion-icon name="trash-outline"></ion-icon></button>
-                </div>
-                </div>
-                <div>
-                    <div class="article">
-                    <span class="productname">Nike Air Force 1 '07Nike Air Force 1 '07</span>
-                    <span class="price">119,99€</span>
-                </div>
-                <div class="number-delete">
-                    <select name="quantity" id="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button class="buttondelete" type="#"><ion-icon name="trash-outline"></ion-icon></button>
-                </div>
-                </div>
-            </div>
+                <h2>Mon panier </h2>
+                <div class="contentbasket"></div>
                 <div id="infosprix">
                     <div>Sous-total <span>284,97</span></div>
                     <div>Transports <span>Gratuit</span></div>
                     <div>Taxes TVA <span>57€ (20%)</span></div>
                     <div>Total <span>341,97€</span></div>
                 </div>
-
-                <button ditype="#">Payer maintenant</button>
+                <button type="#">Commander</button>
             </section>
+
         </main>
+        <footer>
+            <p>© 2023 Shoes</p>
+        </footer>
         <script src="index.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
