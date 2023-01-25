@@ -254,8 +254,27 @@ section#panier span.price {
 }
 
 /* FOOTER */
-footer {
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b1b1b;
+  height: 200px;
+}
+
+.social a ion-icon {
+  padding: 0 0.5em;
+  color: rgb(240, 240, 240);
+  font-size: 25px;
+}
+
+#copyright {
+  color: rgb(129, 129, 129);
+  padding: 0.5em;
   text-align: center;
-  background-color: rgb(240, 240, 240);
-  height: 135px;
+  background: #1b1b1b;
+}
+
+#copyright p {
+  font-size: 12px;
 }
