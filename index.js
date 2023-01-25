@@ -83,12 +83,19 @@ function displayAvailableProducts() {
 // ADD PRODUCT
 function addProductToCart(productId) {
   let product = availableProducts[productId];
-  if (cart.findIndex(productId)) {
-    /* Si le produit n'est pas dans le panier*/
-    //   product.nb = 1;
-    //   return
-    //   cart.push(product);
-    // } else {
+  // find index
+  let positionInCart = -1;
+  for (let c = 0; c < cart.length; c++) {
+    if (cart[c].reference == product.reference) {
+      positionInCart = c;
+    }
+  }
+  /* Si le produit n'est pas dans le panier*/
+  if (positionInCart == -1) {
+    product.nb = 1;
+    cart.push(product);
+  } else {
+    cart[positionInCart].nb++;
   }
 
   displayCart(productId);
@@ -117,16 +124,13 @@ function displayCart() {
       <button onclick="removeProductFromCart(${i})" class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
     </div>`;
     panierSection.append(templatePanier);
-  displayTotalAmount();
-}
+    displayTotalAmount();
+  }
 
-
-// Addition des prix
-
-
-function displayTotalAmount() {
-  let titre = document.querySelector("#panier h2");
-  titre.textContent = "Mon panier " + "(" + cart.length + ")";
+  // DISPLAY TOTAL AMOUNT
+  function displayTotalAmount() {
+    let titre = document.querySelector("#panier h2");
+    titre.textContent = "Mon panier " + "(" + cart.length + ")";
 
   let soustotal = document.querySelector("#infosprix span");
   let sum = 0;
