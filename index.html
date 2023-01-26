@@ -1,26 +1,27 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Shoes</title>
 </head>
 
 <body onload="displayAvailableProducts() ">
     <!-- NAVIGATION -->
     <nav>
-        <img src="img/logoShoes.png" id="" alt="logo" />
+        <img src="img/logoShoes.png" alt="logo">
         <ul>
             <li><a href="#">Femme</a></li>
             <li><a href="#">Homme</a></li>
             <li><a href="#">Enfant</a></li>
-            <div id="icon">
+            <li id="icon">
                 <ion-icon name="search-outline"></ion-icon>
-                <input type="text" name="research" id="research" />
-            </div>
-            <ion-icon name="basket-outline"></ion-icon>
+                <input type="text" name="research" id="research">
+            </li>
+            <li><ion-icon name="basket-outline"></ion-icon></li>
         </ul>
     </nav>
 
@@ -35,14 +36,14 @@
             <section id="articles"></section>
             <!-- SECTION PANIER -->
             <section id="panier">
-                <h2>Mon panier </h2>
+                <h2>Mon panier</h2>
                 <div class="contentbasket"></div>
                 <div id="infosprix">
                     <div>Sous-total <span>0 €</span></div>
                     <div>Taxes TVA <span id="pourcentage">0 €</span></div>
                     <div>Total <span id="total">0 €</span></div>
                 </div>
-                <button type="#">Commander</button>
+                <button type="button">Commander</button>
             </section>
 
         </main>
@@ -56,10 +57,12 @@
             <div id="copyright">
                 <p>&copy; 2023 Running. Tous droits réservés</p>
             </div>
+
         </footer>
-        <script src="index.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

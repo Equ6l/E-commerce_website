@@ -66,23 +66,25 @@ function displayAvailableProducts() {
         </div>
     </div>
     <div class="quantity_price">
-        <select name="quantity" id="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
         <p><b>${availableProducts[i].price}€</b></p>
     </div>
 `;
     articlesSection.append(templateArticles);
+
+    // let selectQuantity = document.querySelector("#quantity");
+    // for (let i = 1; i < 10; i++) {
+    //   let option = document.createElement("option");
+    //   option.value = i;
+    //   option.textContent = i;
+    //   selectQuantity.append(option);
+    // }
   }
 }
 
 // ADD PRODUCT
 function addProductToCart(productId) {
-  let getValue = document.getElementById("quantity").selectedOptions[0].value;
+  // let getValue = document.getElementById("quantity").selectedOptions[0].value;
+  // getValue = parseInt(getValue);
   let product = availableProducts[productId];
   // find index
   let positionInCart = -1;
@@ -93,10 +95,10 @@ function addProductToCart(productId) {
   }
   /* Si le produit n'est pas dans le panier*/
   if (positionInCart == -1) {
-    product.nb = getValue;
+    product.nb = 1;
     cart.push(product);
   } else {
-    cart[positionInCart].nb = getValue;
+    cart[positionInCart].nb++;
   }
   console.log(cart);
   displayCart(productId);
@@ -133,6 +135,10 @@ function displayCart() {
 function displayTotalAmount() {
   let titre = document.querySelector("#panier h2");
   titre.textContent = "Mon panier " + "(" + cart.length + ")";
+
+  if (cart.length == 0) {
+    titre.textContent = "Mon panier";
+  }
 
   let soustotal = document.querySelector("#infosprix span");
   let sum = 0;

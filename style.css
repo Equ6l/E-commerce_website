@@ -97,7 +97,7 @@ main {
   padding-top: 3em;
   margin: auto;
   grid-template-areas:
-    "title title panier"
+    "title title ."
     "articles articles panier"
     "articles articles .";
   gap: 3em;
