@@ -141,7 +141,7 @@ function displayTotalAmount() {
     sum = sum + cart[i].price;
   }
 
-  soustotal.textContent = sum.toFixed(2) + "€";
+  soustotal.textContent = sum.toFixed(2) + " €";
 
   let tva = document.querySelector("#pourcentage");
   let sumtva = 0;
@@ -150,7 +150,7 @@ function displayTotalAmount() {
     sumtva = sumtva + cart[i].price * (20 / 100);
   }
 
-  tva.textContent = sumtva.toFixed(2);
+  tva.textContent = sumtva.toFixed(0) + " €";
 
   let total = document.querySelector("#total");
   let sumtotal = 0;
@@ -159,11 +159,12 @@ function displayTotalAmount() {
     sumtotal = sumtva + sum;
   }
 
-  total.textContent = sumtotal.toFixed(2);
+  total.textContent = sumtotal.toFixed(2) + " €";
 }
 
 // DELETE PRODUCT
 function removeProductFromCart(productId) {
   cart.splice(productId, 1);
   displayCart();
+  displayTotalAmount();
 }
