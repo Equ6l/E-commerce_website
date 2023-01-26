@@ -4,7 +4,7 @@ const availableProducts = [
   {
     img: {
       src: "crocs",
-      alt: "",
+      alt: "CLASSIC UNISEX - Mules",
     },
     reference: "RF053",
     name: "CLASSIC UNISEX - Mules",
@@ -16,7 +16,7 @@ const availableProducts = [
   {
     img: {
       src: "nikeAir",
-      alt: "",
+      alt: "Nike Air Force 1",
     },
     reference: "RF293",
     name: "Nike Air Force 1",
@@ -28,7 +28,7 @@ const availableProducts = [
   {
     img: {
       src: "lacoste",
-      alt: "",
+      alt: "Lacoste Twin Serve",
     },
     reference: "RF368",
     name: "Lacoste Twin Serve",
@@ -82,6 +82,7 @@ function displayAvailableProducts() {
 
 // ADD PRODUCT
 function addProductToCart(productId) {
+  let getValue = document.getElementById("quantity").selectedOptions[0].value;
   let product = availableProducts[productId];
   // find index
   let positionInCart = -1;
@@ -92,12 +93,12 @@ function addProductToCart(productId) {
   }
   /* Si le produit n'est pas dans le panier*/
   if (positionInCart == -1) {
-    product.nb = 1;
+    product.nb = getValue;
     cart.push(product);
   } else {
-    cart[positionInCart].nb++;
+    cart[positionInCart].nb = getValue;
   }
-
+  console.log(cart);
   displayCart(productId);
 }
 
@@ -115,11 +116,11 @@ function displayCart() {
       </div>
       <div class="number-delete">
       <select name="quantity" id="quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
       </select>
       <button onclick="removeProductFromCart(${i})" class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
     </div>`;
@@ -132,18 +133,17 @@ function displayCart() {
     let titre = document.querySelector("#panier h2");
     titre.textContent = "Mon panier " + "(" + cart.length + ")";
 
-  let soustotal = document.querySelector("#infosprix span");
-  let sum = 0;
+    let soustotal = document.querySelector("#infosprix span");
+    let sum = 0;
 
-  for(let i = 0; i < cart.length; i++){
-    sum = cart[i].price + sum;
-  }
-  
-  soustotal.textContent = sum + "€";
+    for (let i = 0; i < cart.length; i++) {
+      sum = cart[i].price + sum;
+    }
+
+    soustotal.textContent = sum + "€";
   }
 
-  let tva = document.querySelector("");
-  
+  // let tva = document.querySelector("");
 }
 
 // DELETE PRODUCT
