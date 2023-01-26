@@ -127,23 +127,39 @@ function displayCart() {
     panierSection.append(templatePanier);
     displayTotalAmount();
   }
+}
 
-  // DISPLAY TOTAL AMOUNT
-  function displayTotalAmount() {
-    let titre = document.querySelector("#panier h2");
-    titre.textContent = "Mon panier " + "(" + cart.length + ")";
+// DISPLAY TOTAL AMOUNT
+function displayTotalAmount() {
+  let titre = document.querySelector("#panier h2");
+  titre.textContent = "Mon panier " + "(" + cart.length + ")";
 
-    let soustotal = document.querySelector("#infosprix span");
-    let sum = 0;
+  let soustotal = document.querySelector("#infosprix span");
+  let sum = 0;
 
-    for (let i = 0; i < cart.length; i++) {
-      sum = cart[i].price + sum;
-    }
-
-    soustotal.textContent = sum + "€";
+  for (let i = 0; i < cart.length; i++) {
+    sum = sum + cart[i].price;
   }
 
-  // let tva = document.querySelector("");
+  soustotal.textContent = sum.toFixed(2) + "€";
+
+  let tva = document.querySelector("#pourcentage");
+  let sumtva = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    sumtva = sumtva + cart[i].price * (20 / 100);
+  }
+
+  tva.textContent = sumtva.toFixed(2);
+
+  let total = document.querySelector("#total");
+  let sumtotal = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    sumtotal = sumtva + sum;
+  }
+
+  total.textContent = sumtotal.toFixed(2);
 }
 
 // DELETE PRODUCT
