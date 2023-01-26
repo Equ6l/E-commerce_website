@@ -12,6 +12,7 @@ const availableProducts = [
     color: "Noir",
     composition: "Coton",
     price: 59.99,
+    // clickedOnce: false
   },
   {
     img: {
@@ -50,7 +51,9 @@ let articlesSection = document.querySelector("#articles");
 function displayAvailableProducts() {
   articlesSection.innerHTML = "";
   for (let i = 0; i < availableProducts.length; i++) {
-    if (availableProducts[i].name.includes(searchbar.value)) {
+    let productNameUC = availableProducts[i].name.toUpperCase();
+    let searchUC = searchbar.value.toUpperCase();
+    if (productNameUC.includes(searchUC.toUpperCase())) {
       let templateArticles = document.createElement("div");
       templateArticles.classList.add("shoes");
       templateArticles.innerHTML = `
@@ -77,13 +80,6 @@ function displayAvailableProducts() {
     </div>
 `;
       articlesSection.append(templateArticles);
-
-      // let selectQuantity = document.querySelector("#quantity");
-      // for (let i = 1; i < 10; i++) {
-      //   let option = document.createElement("option");
-      //   option.value = i;
-      //   option.textContent = i;
-      //   selectQuantity.append(option);
     }
   }
 }
@@ -137,6 +133,14 @@ function displayCart() {
     displayTotalAmount();
   }
 }
+
+// let selectQuantity = document.createElement("select");
+// for (let i = 1; i < 10; i++) {
+//   let option = document.createElement("option");
+//   option.value = i;
+//   option.textContent = i;
+//   selectQuantity.append(option);
+// }
 
 // DISPLAY TOTAL AMOUNT
 function displayTotalAmount() {
