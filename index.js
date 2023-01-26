@@ -39,14 +39,21 @@ const availableProducts = [
   },
 ];
 
+let searchbar = document.querySelector("#research");
+searchbar.addEventListener("input", function () {
+  displayAvailableProducts();
+});
+
 // DISPLAY PRODUCTS
 let articlesSection = document.querySelector("#articles");
 
 function displayAvailableProducts() {
+  articlesSection.innerHTML = "";
   for (let i = 0; i < availableProducts.length; i++) {
-    let templateArticles = document.createElement("div");
-    templateArticles.classList.add("shoes");
-    templateArticles.innerHTML = `
+    if (availableProducts[i].name.includes(searchbar.value)) {
+      let templateArticles = document.createElement("div");
+      templateArticles.classList.add("shoes");
+      templateArticles.innerHTML = `
     
     <img src="./img/${availableProducts[i].img.src}" alt="${availableProducts[i].img.alt}" />
     <div class="infos">
@@ -59,7 +66,7 @@ function displayAvailableProducts() {
                 <li>Taille : ${availableProducts[i].size}</li>
                 <li>Couleur : ${availableProducts[i].color}</li>
                 <li>Composition 100% : ${availableProducts[i].composition}</li>
-            </ul>
+            </ul> 
         </div>
         <div id="btnAdd">
             <button onclick="addProductToCart(${i})" type="button">Ajouter au panier</button>
@@ -69,15 +76,15 @@ function displayAvailableProducts() {
         <p><b>${availableProducts[i].price}€</b></p>
     </div>
 `;
-    articlesSection.append(templateArticles);
+      articlesSection.append(templateArticles);
 
-    // let selectQuantity = document.querySelector("#quantity");
-    // for (let i = 1; i < 10; i++) {
-    //   let option = document.createElement("option");
-    //   option.value = i;
-    //   option.textContent = i;
-    //   selectQuantity.append(option);
-    // }
+      // let selectQuantity = document.querySelector("#quantity");
+      // for (let i = 1; i < 10; i++) {
+      //   let option = document.createElement("option");
+      //   option.value = i;
+      //   option.textContent = i;
+      //   selectQuantity.append(option);
+    }
   }
 }
 
