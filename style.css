@@ -154,12 +154,9 @@ main {
 .quantity_price {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.quantity_price select {
-  width: 50px;
-}
 /* SECTION ARTICLES */
 section#articles {
   padding: 2em 0;

@@ -12,7 +12,7 @@ const availableProducts = [
     color: "Noir",
     composition: "Coton",
     price: 59.99,
-    // clickedOnce: false
+    clickedOnce: false,
   },
   {
     img: {
@@ -120,27 +120,28 @@ function displayCart() {
         <span class="price">${cart[i].price}€</span>
       </div>
       <div class="number-delete">
-      <select name="quantity" id="quantity">
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-          <option value="">4</option>
-          <option value="">5</option>
-      </select>
-      <button onclick="removeProductFromCart(${i})" class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
+        <select name="quantity" id="quantity"></select>
+        <button onclick="removeProductFromCart(${i})" class="buttondelete"type="#"><ion-icon name="trash-outline"></ion-icon></button>
+      </div>
     </div>`;
     panierSection.append(templatePanier);
-    displayTotalAmount();
+
+    let selectQuantity = templatePanier.querySelector("select");
+    selectQuantity.addEventListener("change", function () {
+      cart[i].nb = parseInt(selectQuantity.value);
+    });
+    for (let b = 1; b <= 5; b++) {
+      let option = document.createElement("option");
+      option.value = b;
+      option.textContent = b;
+      selectQuantity.append(option);
+      if (b == cart[i].nb) {
+        option.selected = true;
+      }
+      displayTotalAmount();
+    }
   }
 }
-
-// let selectQuantity = document.createElement("select");
-// for (let i = 1; i < 10; i++) {
-//   let option = document.createElement("option");
-//   option.value = i;
-//   option.textContent = i;
-//   selectQuantity.append(option);
-// }
 
 // DISPLAY TOTAL AMOUNT
 function displayTotalAmount() {
