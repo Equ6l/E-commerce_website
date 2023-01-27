@@ -129,6 +129,7 @@ function displayCart() {
     let selectQuantity = templatePanier.querySelector("select");
     selectQuantity.addEventListener("change", function () {
       cart[i].nb = parseInt(selectQuantity.value);
+      displayTotalAmount();
     });
     for (let b = 1; b <= 5; b++) {
       let option = document.createElement("option");
@@ -153,10 +154,18 @@ function displayTotalAmount() {
   }
 
   let soustotal = document.querySelector("#infosprix span");
+  let livraison = document.querySelector("#infosprix span#gratuit");
   let sum = 0;
 
   for (let i = 0; i < cart.length; i++) {
-    sum = sum + cart[i].price;
+    // sum = sum + cart[i].price;
+    sum = sum + cart[i].price * cart[i].nb;
+
+    if (cart[i].price > 20) {
+      livraison.textContent = `Gratuit`;
+    } else {
+      livraison.innerHTML = `Payante`;
+    }
   }
 
   soustotal.textContent = sum.toFixed(2) + " €";
