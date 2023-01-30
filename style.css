@@ -84,6 +84,10 @@ nav ul li {
   font-size: 16px;
 }
 
+nav ul li#basket {
+  font-size: 20px;
+}
+
 nav ul li a {
   text-decoration: none;
   color: black;
@@ -96,8 +100,7 @@ main {
   display: grid;
   padding-top: 3em;
   margin: auto;
-  /* grid-template-columns: 2fr;
-  grid-template-rows: 2fr; */
+  grid-template-columns: 2fr 2fr 2fr;
   grid-template-areas:
     "title title ."
     "articles articles panier"
@@ -267,6 +270,7 @@ section.paid {
 #creditCard {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 #creditCard ul {
