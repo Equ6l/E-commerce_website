@@ -33,7 +33,7 @@ nav a {
 
 nav a img {
   padding: 1em;
-  width: 15%;
+  width: 13%;
   cursor: pointer;
 }
 
@@ -101,7 +101,7 @@ nav ul li a {
 main {
   width: 80%;
   display: grid;
-  padding-top: 3em;
+  padding: 3% 0;
   margin: auto;
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-areas:
@@ -303,7 +303,7 @@ section#paid {
   justify-content: space-evenly;
   gap: 4em;
   margin: auto;
-  padding-top: 5%;
+  padding: 4% 0;
 }
 
 .leftSide {
@@ -391,8 +391,8 @@ h3 {
 
 .gallery {
   display: grid;
-  margin:auto;
-  width:80%;
+  margin: auto;
+  width: 80%;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -405,7 +405,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1b1b1b;
+  background: #272727;
   height: 200px;
 }
 
@@ -428,7 +428,7 @@ h3 {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
   .burger {
     width: 35px;
     height: 24px;
