@@ -506,6 +506,15 @@ h3 {
   }
   /* PAGE ARTICLES TYPE */
   .leftSide {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow: scroll;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+
+  #articleType{
+    flex-direction: column;
   }
 }
