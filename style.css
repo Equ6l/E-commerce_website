@@ -287,6 +287,19 @@ section.paid {
   width: 60%;
 }
 
+/* PAGE GALLERY */
+
+.gallery {
+  display: grid;
+  margin:auto;
+  width:80%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.productColor {
+  display: flex;
+}
+
 /* FOOTER */
 .social {
   display: flex;
