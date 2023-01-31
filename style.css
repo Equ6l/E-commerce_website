@@ -299,17 +299,10 @@ section#paid {
 
 #articleType {
   width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr;
-  grid-template-areas:
-    "galeryShoes titleArticle"
-    "galeryShoes colorArticle"
-    "galeryShoes sizeArticle"
-    ". addToCart";
-  gap: 2em 4em;
+  display: flex;
   margin: auto;
   padding: 4% 0;
+  gap: 4em;
 }
 
 .galeryShoes {
@@ -317,21 +310,31 @@ section#paid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
-  grid-area: galeryShoes;
 }
 
 h3 {
-  margin-bottom: 35px;
+  /*margin-bottom: 35px;*/
+  margin: 35px 0;
 }
 
 .titleArticle {
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 3em;
   padding-bottom: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  grid-area: titleArticle;
+}
+
+.mobileTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 0.5px;
+  gap: 1em;
+  display: none;
 }
 
 .galeryShoes img {
@@ -345,7 +348,6 @@ h3 {
 }
 
 .color {
-  grid-area: colorArticle;
   display: flex;
   flex-direction: column;
 }
@@ -353,6 +355,11 @@ h3 {
 .picture img {
   width: 10%;
   cursor: pointer;
+}
+
+.picture img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 
 .size {
@@ -387,7 +394,7 @@ h3 {
   background-color: black;
   color: white;
   cursor: pointer;
-  grid-area: addToCart;
+  margin-top: 35px;
 }
 
 #addToCart:hover {
@@ -574,15 +581,58 @@ width: 80%;
     display: flex;
     justify-content: center;
     text-align: center;
+    border-bottom: 0.5px;
     gap: 1em;
-    border-bottom: none;
+    display: none;
   }
 
-  .picture img {
-    width: 25%;
+  .color{
+    align-items: center;
+  }
+
+  .mobileTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    border-bottom: none;
   }
 
   .size h3 {
     text-align: center;
   }
+
+  .picture img {
+    width: 25%;
+  }
+  #addToCart{
+    width: 80%;
+  }
+
+  #addToCart:hover{
+    transition: none;
+    background-color: black;
+    border: none;
+    color: white;
+    
+  }
+
+  #addToCart{
+    width: 80%;
+  }
+
+  #addToCart:hover{
+    transition: none;
+    background-color: black;
+    border: none;
+    color: white;
+    
+  }
 }
+
+
+
+
+
