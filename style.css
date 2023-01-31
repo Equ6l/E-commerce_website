@@ -297,18 +297,17 @@ section#paid {
 
 /* PAGE ARTICLE TYPE */
 
-
 #articleType {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr;
-  grid-template-areas: 
-  "galeryShoes titleArticle"
-  "galeryShoes colorArticle"
-  "galeryShoes sizeArticle"
-  ". addToCart";
-  gap:2em 4em;
+  grid-template-areas:
+    "galeryShoes titleArticle"
+    "galeryShoes colorArticle"
+    "galeryShoes sizeArticle"
+    ". addToCart";
+  gap: 2em 4em;
   margin: auto;
   padding: 4% 0;
 }
@@ -316,7 +315,7 @@ section#paid {
 .galeryShoes {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5em;
   grid-area: galeryShoes;
 }
@@ -329,7 +328,7 @@ h3 {
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-bottom: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   grid-area: titleArticle;
@@ -352,11 +351,11 @@ h3 {
 }
 
 .picture img {
-  width: 70px;
+  width: 10%;
   cursor: pointer;
 }
 
-.size{
+.size {
   grid-area: sizeArticle;
 }
 
@@ -392,7 +391,6 @@ h3 {
 }
 
 #addToCart:hover {
-  /*transform: scale(1.1);*/
   transition: 0.4s;
   background-color: white;
   border: 1px solid black;
@@ -477,6 +475,18 @@ h3 {
     transform: translateY(10px);
   }
 
+  .burger.active span {
+    background-color: transparent;
+  }
+
+  .burger.active span::before {
+    transform: translateY(0px) rotateZ(45deg);
+  }
+
+  .burger.active span::after {
+    transform: translateY(0px) rotateZ(-45deg);
+  }
+
   nav {
     flex-direction: column;
     align-items: center;
@@ -517,23 +527,24 @@ h3 {
     display: none;
   }
   /* PAGE ARTICLES TYPE */
-  #articleType{
+  #articleType {
     width: 100%;
     flex-direction: column;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "titleArticle"
-    "galeryShoes"
-    "colorArticle"
-    "sizeArticle"
-    "addToCart";
+    grid-template-areas:
+      "titleArticle"
+      "galeryShoes"
+      "colorArticle"
+      "sizeArticle"
+      "addToCart";
   }
 
-  .galeryShoes{
+  .galeryShoes {
     display: flex;
     overflow: scroll;
-    gap:0;
+    gap: 0;
   }
 
   .galeryShoes img:hover {
@@ -545,25 +556,20 @@ h3 {
     width: 80%;
     margin: auto;
   }
+
   .titleArticle {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     gap: 1em;
+    border-bottom: none;
   }
 
-  .color{
-    align-items: center;
+  .picture img {
+    width: 25%;
   }
 
-  .size h3{
-    display: flex;
-    justify-content: center;
+  .size h3 {
+    text-align: center;
   }
 }
-
-
-
-
-

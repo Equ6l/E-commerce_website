@@ -195,3 +195,11 @@ function removeProductFromCart(productId) {
   displayCart();
   displayTotalAmount();
 }
+
+// TOGGLE MENU
+
+const burgerMenu = document.querySelector(".burger");
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
+});
