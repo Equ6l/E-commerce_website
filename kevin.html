@@ -9,10 +9,13 @@
     <title>Document</title>
   </head>
 
-  <body>
+  <body onload="displayAvailableProductsMan() ">
     <!-- NAVIGATION -->
     <nav>
-      <img src="img/logoShoes.png" alt="logo" />
+      <div class="burger">
+        <span></span>
+      </div>
+      <a href="#"><img src="img/logoShoes.png" alt="logo" /></a>
       <ul>
         <li><a href="#">Femme</a></li>
         <li><a href="#">Homme</a></li>
@@ -21,53 +24,12 @@
           <ion-icon name="search-outline"></ion-icon>
           <input type="text" name="research" id="research" />
         </li>
-        <li><ion-icon name="basket-outline"></ion-icon></li>
+        <li id="basket"><ion-icon name="basket-outline"></ion-icon></li>
       </ul>
     </nav>
 
     <h2>chaussures pour hommes <span>(XX)</span></h2>
-    <div class="gallery">
-      <div>
-        <img
-          src="/img/1 - Nike Air Max Terrascape Plus [Tricolor].webp"
-          alt=""
-        />
-        <div class="description">
-          <div class="productColor">
-            <img src="/img/test1.webp" alt="" />
-            <img src="/img/test2.webp" alt="" />
-            <img src="/img/test3.webp" alt="" />
-          </div>
-          <p>Nom de la chaussure</p>
-          <p>100€</p>
-        </div>
-      </div>
-      <div>
-        <img src="/img/crocs" alt="" />
-      </div>
-      <div>
-        <img src="/img/crocs" alt="" />
-      </div>
-      <div>
-        <img src="/img/crocs" alt="" />
-      </div>
-      <div>
-        <img src="/img/crocs" alt="" />
-      </div>
-      <div>
-        <img src="/img/crocs" alt="" />
-      </div>
-    </div>
-
-    <!-- <div>
-      <div><img src="/img/crocs" alt="" /></div>
-      <div><img src="/img/crocs" alt="" /></div>
-    </div> -->
-
-    <!-- <div>
-      <p>Nom de la chaussure</p>
-      <p>Prix</p>
-    </div> -->
+    <div class="gallery"></div>
 
     <script src="index.js"></script>
     <script

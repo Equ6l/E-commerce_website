@@ -297,7 +297,6 @@ section#paid {
 
 /* PAGE ARTICLE TYPE */
 
-
 #articleType {
   width: 80%;
   display: flex;
@@ -309,7 +308,7 @@ section#paid {
 .galeryShoes {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5em;
 }
 
@@ -354,7 +353,7 @@ h3 {
 }
 
 .picture img {
-  width: 70px;
+  width: 10%;
   cursor: pointer;
 }
 
@@ -363,7 +362,7 @@ h3 {
   transition: 0.5s;
 }
 
-.size{
+.size {
   grid-area: sizeArticle;
 }
 
@@ -412,10 +411,23 @@ h3 {
   margin: auto;
   width: 80%;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  width : 100%;
 }
 
 .productColor {
   display: flex;
+  gap: 5px;
+  width : 50px;
+  height : 50px;
+}
+
+h2 {
+margin: 3% auto;
+width: 80%;
 }
 
 /* FOOTER */
@@ -483,6 +495,18 @@ h3 {
     transform: translateY(10px);
   }
 
+  .burger.active span {
+    background-color: transparent;
+  }
+
+  .burger.active span::before {
+    transform: translateY(0px) rotateZ(45deg);
+  }
+
+  .burger.active span::after {
+    transform: translateY(0px) rotateZ(-45deg);
+  }
+
   nav {
     flex-direction: column;
     align-items: center;
@@ -523,23 +547,24 @@ h3 {
     display: none;
   }
   /* PAGE ARTICLES TYPE */
-  #articleType{
+  #articleType {
     width: 100%;
     flex-direction: column;
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "titleArticle"
-    "galeryShoes"
-    "colorArticle"
-    "sizeArticle"
-    "addToCart";
+    grid-template-areas:
+      "titleArticle"
+      "galeryShoes"
+      "colorArticle"
+      "sizeArticle"
+      "addToCart";
   }
 
-  .galeryShoes{
+  .galeryShoes {
     display: flex;
     overflow: scroll;
-    gap:0;
+    gap: 0;
   }
 
   .galeryShoes img:hover {
@@ -551,33 +576,47 @@ h3 {
     width: 80%;
     margin: auto;
   }
+
   .titleArticle {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     border-bottom: 0.5px;
     gap: 1em;
     display: none;
   }
 
-  .mobileTitle {
+  .color{
+    align-items: center;
+  }
+
+  .mobileTitle{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 0.5px;
     gap: 1em;
+    border-bottom: none;
   }
 
-  .color{
-    align-items: center;
+  .size h3 {
+    text-align: center;
   }
 
-  .size h3{
-    display: flex;
-    justify-content: center;
+  .picture img {
+    width: 25%;
+  }
+  #addToCart{
+    width: 80%;
+  }
+
+  #addToCart:hover{
+    transition: none;
+    background-color: black;
+    border: none;
+    color: white;
+    
   }
 
   #addToCart{
