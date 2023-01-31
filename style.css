@@ -297,82 +297,80 @@ section#paid {
 
 /* PAGE ARTICLE TYPE */
 
-
-#articleType{
+#articleType {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  gap:4em;
+  gap: 4em;
   margin: auto;
   padding-top: 5%;
 }
 
-.leftSide{
+.leftSide {
   width: 100%;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:0.5em;
+  gap: 0.5em;
 }
 
-.rightSide > *{
+.rightSide > * {
   margin-top: 35px;
 }
 
-h3{
+h3 {
   margin-bottom: 35px;
 }
 
 .titleArticle {
   display: flex;
-  width:100%;
+  width: 100%;
   flex-direction: column;
   gap: 1em;
-  padding-bottom:2em;
+  padding-bottom: 2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.leftSide img{
+.leftSide img {
   width: 100%;
   cursor: pointer;
 }
 
-.leftSide img:hover{
+.leftSide img:hover {
   transform: scale(1.2);
   transition: 0.5s;
 }
 
-.color{
+.color {
   margin-top: 35px;
 }
 
-.picture img{
+.picture img {
   width: 70px;
   cursor: pointer;
 }
 
 .btnSize {
   display: grid;
-  width:100%;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
 }
 
 .btnSize button {
-  cursor:pointer;
+  cursor: pointer;
   background-color: rgb(240, 240, 240);
   border: none;
-  width:100%;
-  height:50px;
+  width: 100%;
+  height: 50px;
   border-radius: 0.4em;
 }
 
-.btnSize button:hover{
-  
+.btnSize button:hover {
   transition: 0.3s;
   border: 1px solid black;
 }
 
-#addToCart{
+#addToCart {
   width: 100%;
   height: 50px;
   border-radius: 30px;
@@ -381,7 +379,7 @@ h3{
   cursor: pointer;
 }
 
-#addToCart:hover{
+#addToCart:hover {
   /*transform: scale(1.1);*/
   transition: 0.4s;
   background-color: white;
@@ -389,33 +387,11 @@ h3{
   color: black;
 }
 
-@media screen and (max-width: 768px){
-
-        .leftSide{
-          grid-template-columns: 1fr;
-        }
+@media screen and (max-width: 768px) {
+  .leftSide {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 .social {
