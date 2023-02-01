@@ -24,9 +24,7 @@ nav {
   width: 100%;
   justify-content: space-evenly;
   background-color: white;
-  padding: 1em;
   box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
 }
 
 nav a {
@@ -34,6 +32,7 @@ nav a {
 }
 
 nav a img {
+  padding: 1em;
   width: 13%;
   cursor: pointer;
 }
@@ -144,7 +143,7 @@ section#paid {
   padding-right: 2em;
 }
 
-.shoes .infos {
+.infos {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -165,7 +164,7 @@ section#paid {
   font-weight: 600;
 }
 
-.shoes .quantity_price {
+.quantity_price {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -300,17 +299,10 @@ section#paid {
 
 #articleType {
   width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.5fr;
-  grid-template-areas:
-    "galeryShoes titleArticle"
-    "galeryShoes colorArticle"
-    "galeryShoes sizeArticle"
-    ". addToCart";
-  gap: 2em 4em;
+  display: flex;
   margin: auto;
   padding: 4% 0;
+  gap: 4em;
 }
 
 .galeryShoes {
@@ -318,21 +310,31 @@ section#paid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
-  grid-area: galeryShoes;
 }
 
 h3 {
-  margin-bottom: 35px;
+  /*margin-bottom: 35px;*/
+  margin: 35px 0;
 }
 
 .titleArticle {
   display: flex;
   width: 100%;
   flex-direction: column;
-  justify-content: space-evenly;
+  gap: 3em;
   padding-bottom: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  grid-area: titleArticle;
+}
+
+.mobileTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 0.5px;
+  gap: 1em;
+  display: none;
 }
 
 .galeryShoes img {
@@ -346,7 +348,6 @@ h3 {
 }
 
 .color {
-  grid-area: colorArticle;
   display: flex;
   flex-direction: column;
 }
@@ -354,6 +355,11 @@ h3 {
 .picture img {
   width: 10%;
   cursor: pointer;
+}
+
+.picture img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 
 .size {
@@ -388,7 +394,7 @@ h3 {
   background-color: black;
   color: white;
   cursor: pointer;
-  grid-area: addToCart;
+  margin-top: 35px;
 }
 
 #addToCart:hover {
@@ -409,19 +415,19 @@ h3 {
 }
 
 .product {
-  width: 100%;
+  width : 100%;
 }
 
 .productColor {
   display: flex;
   gap: 5px;
-  width: 50px;
-  height: 50px;
+  width : 50px;
+  height : 50px;
 }
 
 h2#nombrearticleshomme {
-  margin: 3% auto;
-  width: 80%;
+margin: 3% auto;
+width: 80%;
 }
 
 /* FOOTER */
@@ -451,8 +457,8 @@ h2#nombrearticleshomme {
 }
 
 /* MEDIA QUERIES */
+
 @media screen and (max-width: 768px) {
-  /* TOGGLE MENU */
   .burger {
     width: 35px;
     height: 24px;
@@ -491,7 +497,6 @@ h2#nombrearticleshomme {
 
   .burger.active span {
     background-color: transparent;
-    transition: 0.25s;
   }
 
   .burger.active span::before {
@@ -501,13 +506,14 @@ h2#nombrearticleshomme {
   .burger.active span::after {
     transform: translateY(0px) rotateZ(-45deg);
   }
-  /* MENU */
+
   nav {
     flex-direction: column;
     align-items: center;
-    width: 100%;
     height: 100vh;
     box-shadow: none;
+    position: relative;
+    padding: 1.5em;
     box-sizing: border-box;
   }
 
@@ -580,11 +586,11 @@ h2#nombrearticleshomme {
     display: none;
   }
 
-  .color {
+  .color{
     align-items: center;
   }
 
-  .mobileTitle {
+  .mobileTitle{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -594,11 +600,39 @@ h2#nombrearticleshomme {
     border-bottom: none;
   }
 
-  .picture img {
-    width: 25%;
-  }
-
   .size h3 {
     text-align: center;
   }
+
+  .picture img {
+    width: 25%;
+  }
+  #addToCart{
+    width: 80%;
+  }
+
+  #addToCart:hover{
+    transition: none;
+    background-color: black;
+    border: none;
+    color: white;
+    
+  }
+
+  #addToCart{
+    width: 80%;
+  }
+
+  #addToCart:hover{
+    transition: none;
+    background-color: black;
+    border: none;
+    color: white;
+    
+  }
 }
+
+
+
+
+
