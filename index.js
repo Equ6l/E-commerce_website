@@ -370,6 +370,171 @@ const availableProductsWoman = [
   },
 ];
 
+const availableProductsChild = [
+  {
+    img: {
+      src: "1 - Jordan Flight Origin 4.webp",
+      alt: "Jordan Flight Origin 4",
+    },
+    reference: "921201-100",
+    name: "Jordan Flight Origin 4",
+    Description:
+      "La chaussure Jordan Flight Origin 4 pour Enfant plus âgé offre un confort durable avec une empeigne procurant un bon maintien fabriquée à partir de matériaux de première qualité et un amorti souple sous le pied.",
+    size: 42,
+    color: "Blanc/Noir",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 89.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Court Borough Low 2 SE.webp",
+      alt: "Nike Court Borough Low 2 SE",
+    },
+    reference: "DQ0493-100",
+    name: "Nike Court Borough Low 2 SE",
+    Description:
+      "La Nike Court Borough Low 2 offre la puissance du rose à toutes les futures stars du basketball. Des lacets au Swoosh, en passant par la semelle, le rose est plus qu'une couleur : c'est un état d'esprit ! Cette paire résistante affiche un look et un confort classiques, qui en font un modèle parfait pour jouer tous les jours.",
+    size: 39,
+    color: "Blanc/Rose mousse",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 39.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Dunk Low.webp",
+      alt: "Nike Dunk Low",
+    },
+    reference: "FD1233-002",
+    name: "Nike Dunk Low",
+    Description:
+      "Avec la Nike Dunk Low, votre enfant brillera comme une All-Star. Cette chaussure a un passé incroyable. Elle a d'abord été adoptée par les joueurs de basketball dans les années 80. Avant de devenir une icône du skateboard. Pour être aujourd'hui considérée comme une légende du streetwear. Le cuir résistant permet à ces sneakers de durer et la semelle en caoutchouc offre une meilleure adhérence qui permet aux enfants de jouer n'importe où, des trottoirs aux terrains de jeu, en passant par le parc.",
+    size: 39,
+    color: "Gris",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 59.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Air Max Bolt.webp",
+      alt: "Nike Air Max Bolt",
+    },
+    reference: "CW1627-100",
+    name: "Nike Air Max Bolt",
+    Description:
+      "La Nike Air Max Bolt se distingue par son unité Air difficile à manquer. Elle offre un amorti moelleux et un bon maintien (grâce à ses lacets élastiques !) pour accompagner votre enfant dans toutes ses aventures",
+    size: 39,
+    color: "Blanc",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 64.99,
+  },
+  {
+    img: {
+      src: "1 - Jordan Flight Origin 4[Jeune enfant].webp",
+      alt: "Jordan Flight Origin 4",
+    },
+    reference: "921197-100",
+    name: "Jordan Flight Origin 4",
+    Description:
+      "La chaussure Jordan Flight Origin 4 pour Jeune enfant offre un confort durable avec une empeigne procurant un bon maintien fabriquée à partir de matériaux premium et un amorti souple sous le pied.",
+    size: 39,
+    color: "Blanc",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 64.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Air Zoom Crossover.webp",
+      alt: "Nike Air Zoom Crossover",
+    },
+    reference: "DC5216-004",
+    name: "Nike Air Zoom Crossover",
+    Description:
+      "Notre première chaussure de basketball inspirée des plus grandes joueuses de la ligue a été conçue pour TOUTES et TOUS les jeunes athlètes qui veulent perfectionner leur jeu. Tirant son nom d'un mouvement célèbre, la Nike Air Zoom Crossover apporte plus de rebond sur le terrain grâce à l'unité Zoom Air, pour survoler votre match.",
+    size: 39,
+    color: "Noir",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 84.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Team Hustle D 10 FlyEase [Noir].webp",
+      alt: "Nike Team Hustle D 10 FlyEase",
+    },
+    reference: "DD7303-004",
+    name: "Nike Team Hustle D 10 FlyEase",
+    Description:
+      "Pour les matchs entre amis ou la compétition, la Nike Team Hustle D 10 FlyEase a été conçue pour booster les joueurs de tous niveaux. Avec une adhérence optimisée sur la semelle, un système d'enfilage ultra-facile et une conception alliant durabilité et maintien, cette chaussure est votre meilleure alliée pour marquer des paniers ou remonter le terrain à toute vitesse.",
+    size: 39,
+    color: "Noir",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 54.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Huarache Run.webp",
+      alt: "Nike Huarache Run",
+    },
+    reference: "DX3065-100",
+    name: "Nike Huarache Run",
+    Description:
+      "En 1991, les publicités mémorables scandaient : « Avez-vous chouchouté vos pieds aujourd'hui ? ». Aujourd'hui encore, l'inimitable Nike Huarache Run inspirée des chaussons de ski nautique, enveloppe ton pied, pour une tenue confortable. Sans oublier sa sangle emblématique au talon. Attrapez-la et glissez votre pied directement dans la chaussure. Ajustée, confortable et classique, elle est conçue pour être portée au quotidien.",
+    size: 39,
+    color: "Blanc/Vert gorge/Beige clair/Orange sécurité",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 114.99,
+  },
+  {
+    img: {
+      src: "1 - Nike Air Max Plus 3.webp",
+      alt: "Nike Air Max Plus 3",
+    },
+    reference: "FB8026-001",
+    name: "Nike Air Max Plus 3",
+    Description:
+      "Dépensez-vous sans compter sur le terrain de jeu avec la Nike Air Max Plus 3. Dotées de la technologie Tuned Air visible sous le pied, ces sneakers apportent une touche futuriste à la Air Max Plus. Le mesh respirant et les détails en plastique sur l'empeigne rendent hommage au modèle d'origine et les lignes futuristes autour du talon les ancrent dans un style ultramoderne.",
+    size: 39,
+    color: "Noir/Gris loup/Volt",
+    colorimg: {
+      src1: "",
+      src2: "",
+      src3: "",
+    },
+    price: 149.99,
+  },
+];
+
 let searchbar = document.querySelector("#research");
 searchbar.addEventListener("input", function () {
   displayAvailableProducts();
@@ -525,7 +690,7 @@ function removeProductFromCart(productId) {
   displayTotalAmount();
 }
 
-// DISPLAY PRODUCTS FOR MAN
+// DISPLAY PRODUCTS
 let gallery = document.querySelector(".gallery");
 
 function displayAvailableProducts(products) {
