@@ -416,6 +416,11 @@ h3 {
   gap: 20px;
 }
 
+.gallery a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .product {
   width : 100%;
 }
