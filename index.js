@@ -731,9 +731,12 @@ function displayAvailableProducts(products) {
     }
   }
 }
+
 // TOGGLE MENU
-const burgerMenu = document.querySelector(".burger");
+const burgerMenu = document.querySelector("#burger");
+const navMenu = document.querySelector("nav ul");
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
+  navMenu.classList.toggle("nav-open");
 });
