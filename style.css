@@ -422,7 +422,7 @@ h3 {
   height : 50px;
 }
 
-h2#nombrearticleshomme {
+h2.nbArt {
 margin: 3% auto;
 width: 80%;
 }
@@ -629,6 +629,10 @@ width: 80%;
   }
 }
 
+/*test*/
+.product:hover {
+  opacity: 0.7;
+}
 
 
 
