@@ -502,28 +502,28 @@ searchbar.addEventListener("input", function () {
 });
 
 // DISPLAY PRODUCTS (((CART)))
-let articlesSection = document.querySelector(".gallery");
+// let articlesSection = document.querySelector("section#articles");
 
-// function displayAvailableProducts(products) {
+// function productsInCart(productId) {
 //   articlesSection.innerHTML = "";
-//   for (let i = 0; i < products.length; i++) {
-//     let productNameUC = products[i].name.toUpperCase();
+//   for (let i = 0; i < productId.length; i++) {
+//     let productNameUC = productId[i].name.toUpperCase();
 //     let searchUC = searchbar.value.toUpperCase();
 //     if (productNameUC.includes(searchUC.toUpperCase())) {
 //       let templateArticles = document.createElement("div");
 //       templateArticles.innerHTML = `
 
-//     <img src="./img/articlegalery/${products[i].img.src}" alt="${products[i].img.alt}" />
+//     <img src="./img/articlegalery/${productId[i].img.src}" alt="${productId[i].img.alt}" />
 //     <div class="infos">
 //         <div class="title">
-//             <p>${products[i].reference}</p>
-//             <h4>${products[i].name}</h4>
+//             <p>${productId[i].reference}</p>
+//             <h4>${productId[i].name}</h4>
 //         </div>
-//         <div class="description">
+//         <div class="descriptionCart">
 //             <ul>
-//                 <li>Taille : ${products[i].size}</li>
-//                 <li>Couleur : ${products[i].color}</li>
-//                 <li>Composition 100% : ${products[i].composition}</li>
+//                 <li>Taille : ${productId[i].size}</li>
+//                 <li>Couleur : ${productId[i].color}</li>
+//                 <li>Composition 100% : ${productId[i].composition}</li>
 //             </ul>
 //         </div>
 //         <div id="btnAdd">
@@ -531,7 +531,7 @@ let articlesSection = document.querySelector(".gallery");
 //         </div>
 //     </div>
 //     <div class="quantity_price">
-//         <p><b>${products[i].price}€</b></p>
+//         <p><b>${productId[i].price}€</b></p>
 //     </div>
 // `;
 //       articlesSection.append(templateArticles);
@@ -599,7 +599,7 @@ function displayCart() {
   }
 }
 
-// DISPLAY TOTAL AMOUNT
+// DISPLAY TOTAL AMOUNT CART
 function displayTotalAmount() {
   let titre = document.querySelector("#panier h2");
   titre.textContent = "Mon panier " + "(" + cart.length + ")";
@@ -644,14 +644,14 @@ function displayTotalAmount() {
   total.textContent = sumtotal.toFixed(2) + " €";
 }
 
-// DELETE PRODUCT
+// DELETE PRODUCT CART
 function removeProductFromCart(productId) {
   cart.splice(productId, 1);
   displayCart();
   displayTotalAmount();
 }
 
-// DISPLAY PRODUCTS
+// DISPLAY GALLERY PRODUCTS
 let gallery = document.querySelector(".gallery");
 
 function displayAvailableProducts(products) {
@@ -695,13 +695,142 @@ function displayAvailableProducts(products) {
 }
 
 // TOGGLE MENU
-const burgerMenu = document.querySelector(".burger");
+const burgerMenu = document.querySelector("#burger");
+const navMenu = document.querySelector("nav ul");
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
+  navMenu.classList.toggle("nav-open");
 });
 
 // NOMBRE DE PRODUITS PAR PAGE
 function updateNbArt(nbArt) {
   document.querySelector(".nbArt span").innerHTML = nbArt + " Article(s)";
+}
+
+// DISPLAY ARTICLE TYPE
+
+let articleType = document.querySelector("section#articleType");
+
+// function displayArticle(products) {
+// articleType.innerHTML = ``;
+// for (let i = 0; i < products.length; i++) {
+// console.log("bjr");
+// let templateArticleType = document.createElement("div");
+// templateArticleType.innerHTML = `
+//   <div class="galeryShoes">
+//   <img
+//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp"
+//     alt=""
+//   />
+//   <img
+//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/2 - Nike Air Max Terrascape Plus - dessous [Blanc].webp"
+//     alt=""
+//   />
+//   <img
+//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/3 - Nike Air Max Terrascape Plus - dessus [Blanc].webp"
+//     alt=""
+//   />
+//   <img
+//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/4 - Nike Air Max Terrascape Plus - coté [Blanc].webp"
+//     alt=""
+//   />
+// </div>
+
+// <aside>
+//   <div class="titleArticle">
+//     <h2>Nike Dunk Low</h2>
+//     <p>
+//       Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec in
+//       nulla porta lorem rhoncus feugiat.
+//     </p>
+//     <p>69.99 €</p>
+//   </div>
+
+//   <div class="color">
+//     <h3>Couleurs</h3>
+//     <div class="picture">
+
+//       <img onclick ="pictureColorChange(0)"src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp" alt="" />
+//       <img onclick ="pictureColorChange(1)"
+//         src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp"
+//         alt=""
+//       />
+//       <img onclick ="pictureColorChange(2)"
+//         src="img/1 - Nike Air Max Terrascape Plus/Tricolor/1 - Nike Air Max Terrascape Plus [Tricolor].webp"
+//         alt=""
+//       />
+
+//     </div>
+//   </div>
+
+//   <div class="size">
+//     <h3>Sélectionner une taille</h3>
+//     <div class="btnSize">
+//       <button>EU 38</button>
+//       <button>EU 39</button>
+//       <button>EU 40</button>
+//       <button>EU 41</button>
+//       <button>EU 42</button>
+//       <button>EU 43</button>
+//       <button>EU 44</button>
+//       <button>EU 45</button>
+//       <button>EU 46</button>
+//       <button>EU 47</button>
+//       <button>EU 48</button>
+//       <button>EU 49</button>
+//     </div>
+//   </div>
+//   <button onclick="addProductToCart()" id="addToCart">Ajouter au panier</button>
+// </aside>`;
+// articleType.append(templateArticleType);
+// }
+// }
+
+// DISPLAY SHOE COLOR
+
+function pictureColorChange(shoeColor) {
+  let images = document.querySelectorAll(".galeryShoes img");
+  let firstBorder = document.querySelector(".picture img:first-child");
+  let secondBorder = document.querySelector(".picture img:nth-child(2)");
+  let thirdBorder = document.querySelector(".picture img:last-child");
+
+  if (shoeColor == 0) {
+    firstBorder.style.border = "1px solid black";
+    secondBorder.style.border = "none";
+    thirdBorder.style.border = "none";
+
+    images[0].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp";
+    images[1].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/2 - Nike Air Max Terrascape Plus - dessous [Blanc].webp";
+    images[2].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/3 - Nike Air Max Terrascape Plus - dessus [Blanc].webp";
+    images[3].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/4 - Nike Air Max Terrascape Plus - coté [Blanc].webp";
+  } else if (shoeColor == 1) {
+    firstBorder.style.border = "none";
+    secondBorder.style.border = "1px solid black";
+    thirdBorder.style.border = "none";
+    images[0].src =
+      "img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp";
+    images[1].src =
+      "img/1 - Nike Air Max Terrascape Plus/Noir/2 - Nike Air Max Terrascape Plus - Dessous[Noir].webp";
+    images[2].src =
+      "img/1 - Nike Air Max Terrascape Plus/Noir/3 - Nike Air Max Terrascape Plus - dessus[Noir].webp";
+    images[3].src =
+      "img/1 - Nike Air Max Terrascape Plus/Noir/4 - Nike Air Max Terrascape Plus - coté [Noir].webp";
+  } else {
+    firstBorder.style.border = "none";
+    secondBorder.style.border = "none";
+    thirdBorder.style.border = "1px solid black";
+    images[0].src =
+      "img/1 - Nike Air Max Terrascape Plus/Tricolor/1 - Nike Air Max Terrascape Plus [Tricolor].webp";
+    images[1].src =
+      "img/1 - Nike Air Max Terrascape Plus/Tricolor/2 - Nike Air Max Terrascape Plus - dessous [Tricolor].webp";
+    images[2].src =
+      "img/1 - Nike Air Max Terrascape Plus/Tricolor/3 - Nike Air Max Terrascape Plus - dessus[Tricolor].webp";
+    images[3].src =
+      "img/1 - Nike Air Max Terrascape Plus/Tricolor/4 - Nike Air Max Terrascape Plus - coté[Tricolor].webp";
+  }
 }
