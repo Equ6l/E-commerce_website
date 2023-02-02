@@ -149,7 +149,7 @@ section#paid {
   justify-content: space-evenly;
 }
 
-.description ul li {
+.descriptionCart ul li {
   list-style-type: none;
   padding: 0.5em 0;
   font-size: 13px;
@@ -349,9 +349,14 @@ h3 {
   flex-direction: column;
 }
 
-.picture img {
-  width: 10%;
+.color .picture img {
+  width: 60px;
   cursor: pointer;
+}
+
+.picture img:first-child {
+  border: 1px solid black;
+
 }
 
 .picture img:hover {
