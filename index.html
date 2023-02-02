@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="./img/icon.png" sizes="32x32" type="image/png" />
   <title>Your cart</title>
+
 </head>
 
   <body>
@@ -37,7 +38,12 @@
         <button type="button"><a href="">&#60; Retour</a></button>
         <h2>Mes articles</h2>
       </div>
-      <section id="articles"></section>
+      <section id="articles">
+        <div class="cartVide">
+          Votre panier est actuellement vide <br>
+          Continuez vos achats en <a href="femme.html"> cliquant ici ! </a>
+        </div>
+      </section>
       <!-- SECTION PANIER -->
       <section id="panier">
         <h2>Mon panier</h2>
@@ -75,6 +81,12 @@
     </footer>
   </div>
   <script src="index.js"></script>
+  <script>
+    let productToAdd = parseInt(localStorage.getItem("id"));
+    if (isNaN(productToAdd) == false) {
+      addProductToCart(availableProductsMan[productToAdd]);
+    }
+  </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

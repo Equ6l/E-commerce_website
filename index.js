@@ -18,7 +18,7 @@ const availableProductsMan = [
       src2: "1 - Nike Air Max Terrascape Plus [Blanc].webp",
       src3: "1 - Nike Air Max Terrascape Plus [Tricolor].webp",
     },
-    price: 199.99,
+    price: 69.99,
   },
   {
     img: {
@@ -501,49 +501,40 @@ searchbar.addEventListener("input", function () {
   displayAvailableProducts();
 });
 
-// DISPLAY PRODUCTS (((CART)))
-// let articlesSection = document.querySelector("section#articles");
-
-// function productsInCart(productId) {
-//   articlesSection.innerHTML = "";
-//   for (let i = 0; i < productId.length; i++) {
-//     let productNameUC = productId[i].name.toUpperCase();
-//     let searchUC = searchbar.value.toUpperCase();
-//     if (productNameUC.includes(searchUC.toUpperCase())) {
-//       let templateArticles = document.createElement("div");
-//       templateArticles.innerHTML = `
-
-//     <img src="./img/articlegalery/${productId[i].img.src}" alt="${productId[i].img.alt}" />
-//     <div class="infos">
-//         <div class="title">
-//             <p>${productId[i].reference}</p>
-//             <h4>${productId[i].name}</h4>
-//         </div>
-//         <div class="descriptionCart">
-//             <ul>
-//                 <li>Taille : ${productId[i].size}</li>
-//                 <li>Couleur : ${productId[i].color}</li>
-//                 <li>Composition 100% : ${productId[i].composition}</li>
-//             </ul>
-//         </div>
-//         <div id="btnAdd">
-//             <button onclick="addProductToCart(${i})" type="button">Ajouter au panier</button>
-//         </div>
-//     </div>
-//     <div class="quantity_price">
-//         <p><b>${productId[i].price}€</b></p>
-//     </div>
-// `;
-//       articlesSection.append(templateArticles);
-//     }
-//   }
-// }
+function displayProductsInCart() {
+  let articlesSection = document.querySelector("section#articles");
+  articlesSection.innerHTML = "";
+  for (let i = 0; i < cart.length; i++) {
+    let templateArticles = document.createElement("div");
+    templateArticles.classList.add("shoes");
+    templateArticles.innerHTML = `
+    
+    <img src="./img/1 - Nike Air Max Terrascape Plus/Noir/${cart[i].img.src}" alt="${cart[i].img.alt}" />
+    <div class="infos">
+        <div class="title">
+            <p>${cart[i].reference}</p>
+            <h4>${cart[i].name}</h4>
+        </div>
+        <div class="descriptionCart">
+            <ul>
+                <li>Taille : ${cart[i].size}</li>
+                <li>Couleur : ${cart[i].color}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="quantity_price">
+        <p><b>${cart[i].price}€</b></p>
+    </div>
+`;
+    articlesSection.append(templateArticles);
+  }
+}
 
 // ADD PRODUCT
-function addProductToCart(productId) {
+function addProductToCart(product) {
   // let getValue = document.getElementById("quantity").selectedOptions[0].value;
   // getValue = parseInt(getValue);
-  let product = availableProducts[productId];
+
   // find index
   let positionInCart = -1;
   for (let c = 0; c < cart.length; c++) {
@@ -559,7 +550,8 @@ function addProductToCart(productId) {
     cart[positionInCart].nb++;
   }
   console.log(cart);
-  displayCart(productId);
+  displayCart();
+  displayProductsInCart();
 }
 
 // DISPLAY CART
