@@ -705,7 +705,15 @@ burgerMenu.addEventListener("click", () => {
 
 // NOMBRE DE PRODUITS PAR PAGE
 function updateNbArt(nbArt) {
-  document.querySelector(".nbArt span").innerHTML = nbArt + " Article(s)";
+  let articleNumber = document.querySelector(".nbArt span");
+
+  if (nbArt == 1) {
+    articleNumber.innerHTML = `<span style='font-weight:500'> ${nbArt} article</span>`;
+  } else if (nbArt == 0) {
+    articleNumber.innerHTML = `<span style='font-weight:500; font-size:17px'><br>Nous n'avons plus d'articles pour le moment...`;
+  } else {
+    articleNumber.innerHTML = `<span style='font-weight:500;'> ${nbArt} articles</span>`;
+  }
 }
 
 // DISPLAY ARTICLE TYPE
