@@ -660,7 +660,8 @@ function displayAvailableProducts(products) {
     let productNameUC = products[i].name.toUpperCase();
     let searchUC = searchbar.value.toUpperCase();
     if (productNameUC.includes(searchUC.toUpperCase())) {
-      let templateArticles = document.createElement("div");
+      let templateArticles = document.createElement("a");
+      templateArticles.href = "articles.html";
       templateArticles.innerHTML = `
 
         <img

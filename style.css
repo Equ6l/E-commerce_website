@@ -294,7 +294,7 @@ section#paid {
   width: 60%;
 }
 
-/* PAGE ARTICLE TYPE */
+/* PAGE ARTICLE TYPE 
 
 #articleType {
   width: 80%;
@@ -322,7 +322,7 @@ h3 {
   gap: 3em;
   padding-bottom: 2%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
+} 
 
 .mobileTitle {
   display: none;
@@ -404,7 +404,7 @@ h3 {
   background-color: white;
   border: 1px solid black;
   color: black;
-}
+} */
 
 /* PAGE GALLERY */
 
@@ -415,6 +415,11 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 60px 0;
+}
+
+.gallery a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .product {
@@ -566,7 +571,7 @@ h2.nbArt {
   }
 
   /* PAGE ARTICLES TYPE */
-  #articleType {
+  /*#articleType {
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -647,7 +652,8 @@ h2.nbArt {
     background-color: black;
     border: none;
     color: white;
-  }
+    
+  }*/
 }
 
 /*test*/
