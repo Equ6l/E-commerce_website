@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./img/icon.png" sizes="32x32" type="image/png" />
-    <title>Your cart</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./img/icon.png" sizes="32x32" type="image/png" />
+  <title>Your cart</title>
+</head>
 
   <body onload="productsInCart() ">
     <!-- NAVIGATION -->
@@ -28,67 +29,54 @@
       </ul>
     </nav>
 
-    <!-- MAIN -->
-    <div class="container">
-      <main>
-        <!-- SECTION ARTICLES -->
-        <div class="pageTitle">
-          <button type="button"><a href="">&#60; Retour</a></button>
-          <h2>Sneakers</h2>
+  <!-- MAIN -->
+  <div class="container">
+    <main>
+      <!-- SECTION ARTICLES -->
+      <div class="pageTitle">
+        <button type="button"><a href="">&#60; Retour</a></button>
+        <h2>Sneakers</h2>
+      </div>
+      <section id="articles"></section>
+      <!-- SECTION PANIER -->
+      <section id="panier">
+        <h2>Mon panier</h2>
+        <div class="contentbasket"></div>
+        <div id="infosprix">
+          <div>Sous-total <span>0 €</span></div>
+          <div>Livraison <span id="gratuit"></span></div>
+          <div>Taxes TVA <span id="pourcentage">0 €</span></div>
+          <div>Total <span id="total">0 €</span></div>
         </div>
-        <section id="articles"></section>
-        <!-- SECTION PANIER -->
-        <section id="panier">
-          <h2>Mon panier</h2>
-          <div class="contentbasket"></div>
-          <div id="infosprix">
-            <div>Sous-total <span>0 €</span></div>
-            <div>Livraison <span id="gratuit"></span></div>
-            <div>Taxes TVA <span id="pourcentage">0 €</span></div>
-            <div>Total <span id="total">0 €</span></div>
-          </div>
-          <button type="button">Commander</button>
-        </section>
-        <section id="paid">
-          <h2>Nous acceptons</h2>
-          <div id="creditCard">
-            <ul>
-              <li><img src="./img/mastercard.png" alt="" /></li>
-              <li><img src="./img/cb.png" alt="" /></li>
-              <li><img src="./img/paypal.png" alt="" /></li>
-              <li><img src="./img/visa.png" alt="" /></li>
-            </ul>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="social">
-          <a href="https://www.facebook.com/"
-            ><ion-icon name="logo-facebook"></ion-icon
-          ></a>
-          <a href="https://twitter.com/"
-            ><ion-icon name="logo-twitter"></ion-icon
-          ></a>
-          <a href="https://www.pinterest.fr/"
-            ><ion-icon name="logo-pinterest"></ion-icon
-          ></a>
-          <a href="https://www.instagram.com/"
-            ><ion-icon name="logo-instagram"></ion-icon
-          ></a>
+        <button type="button">Commander</button>
+      </section>
+      <section id="paid">
+        <h2>Nous acceptons</h2>
+        <div id="creditCard">
+          <ul>
+            <li><img src="./img/mastercard.png" alt="" /></li>
+            <li><img src="./img/cb.png" alt="" /></li>
+            <li><img src="./img/paypal.png" alt="" /></li>
+            <li><img src="./img/visa.png" alt="" /></li>
+          </ul>
         </div>
-        <div id="copyright">
-          <p>&copy; 2023 Running. Tous droits réservés</p>
-        </div>
-      </footer>
-    </div>
-    <script src="index.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+      </section>
+    </main>
+    <footer>
+      <div class="social">
+        <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://www.pinterest.fr/"><ion-icon name="logo-pinterest"></ion-icon></a>
+        <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+      </div>
+      <div id="copyright">
+        <p>&copy; 2023 Running. Tous droits réservés</p>
+      </div>
+    </footer>
+  </div>
+  <script src="index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

@@ -1,44 +1,5 @@
 // VARIABLES GLOBALES
 let cart = [];
-const availableProducts = [
-  {
-    img: {
-      src: "crocs",
-      alt: "CLASSIC UNISEX - Mules",
-    },
-    reference: "RF053",
-    name: "CLASSIC UNISEX - Mules",
-    size: 42,
-    color: "Noir",
-    composition: "Coton",
-    price: 59.99,
-    clickedOnce: false,
-  },
-  {
-    img: {
-      src: "nikeAir",
-      alt: "Nike Air Force 1",
-    },
-    reference: "RF293",
-    name: "Nike Air Force 1",
-    size: 38,
-    color: "Blanc",
-    composition: "Coton",
-    price: 119.99,
-  },
-  {
-    img: {
-      src: "lacoste",
-      alt: "Lacoste Twin Serve",
-    },
-    reference: "RF368",
-    name: "Lacoste Twin Serve",
-    size: 39,
-    color: "Noir",
-    composition: "Cuir",
-    price: 104.99,
-  },
-];
 
 const availableProductsMan = [
   {
@@ -491,7 +452,7 @@ const availableProductsChild = [
     size: 39,
     color: "Noir",
     colorimg: {
-      src1: "",
+      src1: "1 - Nike Team Hustle D 10 FlyEase - [Rouge].webp",
       src2: "",
       src3: "",
     },
@@ -731,13 +692,22 @@ function displayAvailableProducts(products) {
       gallery.append(templateArticles);
     }
   }
+  updateNbArt(products.length);
 }
+
 // TOGGLE MENU
-const burgerMenu = document.querySelector(".burger");
+const burgerMenu = document.querySelector("#burger");
+const navMenu = document.querySelector("nav ul");
 
 burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
+  navMenu.classList.toggle("nav-open");
 });
+
+// NOMBRE DE PRODUITS PAR PAGE
+function updateNbArt(nbArt) {
+  document.querySelector(".nbArt span").innerHTML = nbArt + " Article(s)";
+}
 
 // DISPLAY ARTICLE TYPE
 
