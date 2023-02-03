@@ -101,7 +101,7 @@ nav ul li a {
 main {
   width: 80%;
   display: grid;
-  padding: 3% 0;
+  padding: 40px 0;
   margin: auto;
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-areas:
