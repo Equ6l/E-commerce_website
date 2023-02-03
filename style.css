@@ -29,6 +29,7 @@ nav {
 
 nav a {
   width: 30%;
+  font-weight: 500;
 }
 
 nav a img {
@@ -417,20 +418,30 @@ h3 {
   padding: 60px 0;
 }
 
-.gallery a{
+.gallery a {
   text-decoration: none;
   color: inherit;
 }
 
 .product {
   width: 100%;
+  padding-bottom: 8px;
+}
+
+.product:hover {
+  filter: opacity(70%);
+  transition: 0.3s ease-in-out;
 }
 
 .productColor {
   display: flex;
-  gap: 5px;
-  width: 50px;
-  height: 50px;
+  gap: 8px;
+  width: 70px;
+  height: 70px;
+}
+
+.description p:nth-child(2) {
+  padding: 8px 0;
 }
 
 h2.nbArt {
@@ -532,6 +543,14 @@ h2.nbArt {
     display: none;
   }
 
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  nav ul li#basket ion-icon {
+    font-size: 25px;
+  }
+
   .nav-open {
     width: 100%;
     display: flex;
@@ -570,6 +589,16 @@ h2.nbArt {
     padding: 40px 0;
   }
 
+  /* FOOTER */
+  .social {
+    height: 100px;
+  }
+  .social a ion-icon {
+    font-size: 20px;
+  }
+  #copyright p {
+    font-size: 10px;
+  }
   /* PAGE ARTICLES TYPE */
   /*#articleType {
     width: 100%;
@@ -654,9 +683,4 @@ h2.nbArt {
     color: white;
     
   }*/
-}
-
-/*test*/
-.product:hover {
-  opacity: 0.7;
 }

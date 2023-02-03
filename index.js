@@ -713,7 +713,7 @@ function updateNbArt(nbArt) {
   } else if (nbArt == 0) {
     articleNumber.innerHTML = `<span style='font-weight:500; font-size:17px'><br>Nous n'avons plus d'articles pour le moment...`;
   } else {
-    articleNumber.innerHTML = `<span style='font-weight:500;'> ${nbArt} articles</span>`;
+    articleNumber.innerHTML = `<span style='font-weight:500;'>${nbArt} articles</span>`;
   }
 }
 
