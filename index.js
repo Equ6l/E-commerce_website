@@ -527,7 +527,7 @@ function displayProductsInCart() {
   if (localStorage.getItem("id") == null) {
     templateArticles.innerHTML = `
   <div class="cartVide">
-    Votre panier est actuellement vide <br>
+    Votre panier est actuellement vide. <br>
     Continuez vos achats en <a href="femme.html"> cliquant ici ! </a>
   </div>`;
     articlesSection.append(templateArticles);
@@ -625,7 +625,7 @@ function displayTotalAmount() {
   let sumtva = 0;
 
   for (let i = 0; i < cart.length; i++) {
-    sumtva = sumtva + cart[i].price * (20 / 100);
+    sumtva = sumtva + sum * (20 / 100);
   }
 
   tva.textContent = sumtva.toFixed(0) + " €";
