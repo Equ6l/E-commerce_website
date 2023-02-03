@@ -496,11 +496,6 @@ const availableProductsChild = [
   },
 ];
 
-let searchbar = document.querySelector("#research");
-searchbar.addEventListener("input", function () {
-  displayAvailableProducts();
-});
-
 function displayProductsInCart() {
   let articlesSection = document.querySelector("section#articles");
   articlesSection.innerHTML = "";
@@ -645,6 +640,10 @@ function removeProductFromCart(productId) {
 
 // DISPLAY GALLERY PRODUCTS
 let gallery = document.querySelector(".gallery");
+let searchbar = document.querySelector("#research");
+searchbar.addEventListener("input", function () {
+  displayAvailableProducts(availableProductsMan);
+});
 
 function displayAvailableProducts(products) {
   gallery.innerHTML = "";

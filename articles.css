@@ -94,6 +94,9 @@ h3 {
 #addToCart {
   width: 100%;
   height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
   border-radius: 30px;
   border: none;
   background-color: black;
