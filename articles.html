@@ -1,139 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="articles.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./img/icon.png" sizes="32x32" type="image/png" />
-    <title>Article | Type</title>
-  </head>
 
-  <body>
-    <nav>
-      <div id="burger">
-        <span></span>
-      </div>
-      <a href="#"><img src="img/logoShoes.png" alt="logo" /></a>
-      <ul>
-        <li><a href="femme.html">Femme</a></li>
-        <li><a href="homme.html">Homme</a></li>
-        <li><a href="enfant.html">Enfant</a></li>
-        <li id="icon">
-          <ion-icon name="search-outline"></ion-icon>
-          <input type="text" name="research" id="research" />
-        </li>
-        <li id="basket"><a href="index.html"><ion-icon name="basket-outline"></ion-icon></a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="articles.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./img/icon.png" sizes="32x32" type="image/png" />
+  <title>Article | Type</title>
+</head>
 
-    <section id="articleType">
-      <div class="mobileTitle">
-        <h2>Nike Dunk Low</h2>
+<body>
+  <nav>
+    <div id="burger">
+      <span></span>
+    </div>
+    <a href="index.html"><img src="img/logoShoes.png" alt="logo" /></a>
+    <ul>
+      <li><a href="femme.html">Femme</a></li>
+      <li><a href="homme.html">Homme</a></li>
+      <li><a href="enfant.html">Enfant</a></li>
+      <li id="icon">
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text" name="research" id="research" />
+      </li>
+      <li id="basket"><a href="cart.html"><ion-icon name="basket-outline"></ion-icon></a></li>
+    </ul>
+  </nav>
+
+  <section id="articleType">
+    <div class="mobileTitle">
+      <h2>Nike Air Max Terrascape Plus</h2>
+      <p>
+        Style rebelle des années 90 revisité. Les détails robustes, notamment des pointes renforcées et une cage en
+        plastique résistante, renforcent votre esprit aventurier avec un style inspiré des grands espaces. Et pour une
+        plus grande stabilité, la semelle intermédiaire innovante en mousse Crater rehausse encore votre expérience
+        Tuned Air.
+      </p>
+      <p>69.99 €</p>
+    </div>
+    <div class="galeryShoes">
+      <img src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp" alt="" />
+      <img src="img/1 - Nike Air Max Terrascape Plus/Noir/2 - Nike Air Max Terrascape Plus - Dessous[Noir].webp"
+        alt="" />
+      <img src="img/1 - Nike Air Max Terrascape Plus/Noir/3 - Nike Air Max Terrascape Plus - dessus[Noir].webp"
+        alt="" />
+      <img src="img/1 - Nike Air Max Terrascape Plus/Noir/4 - Nike Air Max Terrascape Plus - coté [Noir].webp" alt="" />
+
+    </div>
+
+    <aside>
+      <div class="titleArticle">
+        <h2>Nike Air Max Terrascape Plus</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec in nulla
-          porta lorem rhoncus feugiat.
+          Style rebelle des années 90 revisité. Les détails robustes, notamment des pointes renforcées et une cage en
+          plastique résistante, renforcent votre esprit aventurier avec un style inspiré des grands espaces. Et pour une
+          plus grande stabilité, la semelle intermédiaire innovante en mousse Crater rehausse encore votre expérience
+          Tuned Air.
         </p>
         <p>69.99 €</p>
       </div>
-      <div class="galeryShoes">
-        <img
-          src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp"
-          alt=""
-        />
-        <img
-          src="img/1 - Nike Air Max Terrascape Plus/Noir/2 - Nike Air Max Terrascape Plus - Dessous[Noir].webp"
-          alt=""
-        />
-        <img
-          src="img/1 - Nike Air Max Terrascape Plus/Noir/3 - Nike Air Max Terrascape Plus - dessus[Noir].webp"
-          alt=""
-        />
-        <img
-          src="img/1 - Nike Air Max Terrascape Plus/Noir/4 - Nike Air Max Terrascape Plus - coté [Noir].webp"
-          alt=""
-        />
-       
+
+      <div class="color">
+        <h3>Couleurs</h3>
+        <div class="picture">
+
+          <img onclick="pictureColorChange(0)"
+            src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp" alt="" />
+          <img onclick="pictureColorChange(1)"
+            src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp" alt="" />
+          <img onclick="pictureColorChange(2)"
+            src="img/1 - Nike Air Max Terrascape Plus/Tricolor/1 - Nike Air Max Terrascape Plus [Tricolor].webp"
+            alt="" />
+
+        </div>
       </div>
 
-      <aside>
-        <div class="titleArticle">
-          <h2>Nike Dunk Low</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec in
-            nulla porta lorem rhoncus feugiat.
-          </p>
-          <p>69.99 €</p>
+      <div class="size">
+        <h3>Sélectionner une taille</h3>
+        <div class="btnSize">
+          <button>EU 38</button>
+          <button>EU 39</button>
+          <button>EU 40</button>
+          <button>EU 41</button>
+          <button>EU 42</button>
+          <button>EU 43</button>
+          <button>EU 44</button>
+          <button>EU 45</button>
+          <button>EU 46</button>
+          <button>EU 47</button>
+          <button>EU 48</button>
+          <button>EU 49</button>
         </div>
-
-        <div class="color">
-          <h3>Couleurs</h3>
-          <div class="picture">
-
-            <img onclick ="pictureColorChange(0)"src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp" alt="" />
-            <img onclick ="pictureColorChange(1)"
-              src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp"
-              alt=""
-            />
-            <img onclick ="pictureColorChange(2)"
-              src="img/1 - Nike Air Max Terrascape Plus/Tricolor/1 - Nike Air Max Terrascape Plus [Tricolor].webp"
-              alt=""
-            />
-            
-          </div>
-        </div>
-
-        <div class="size">
-          <h3>Sélectionner une taille</h3>
-          <div class="btnSize">
-            <button>EU 38</button>
-            <button>EU 39</button>
-            <button>EU 40</button>
-            <button>EU 41</button>
-            <button>EU 42</button>
-            <button>EU 43</button>
-            <button>EU 44</button>
-            <button>EU 45</button>
-            <button>EU 46</button>
-            <button>EU 47</button>
-            <button>EU 48</button>
-            <button>EU 49</button>
-          </div>
-        </div>
-        <a href="index.html" onclick ="localStorage.setItem('id',0)">
+      </div>
+      <a href="cart.html" onclick="localStorage.setItem('id',0)">
         <button id="addToCart">Ajouter au panier</button>
-        </a>
-      </aside>
-    </section>
-    <footer>
-      <div class="social">
-        <a href="https://www.facebook.com/"
-          ><ion-icon name="logo-facebook"></ion-icon
-        ></a>
-        <a href="https://twitter.com/"
-          ><ion-icon name="logo-twitter"></ion-icon
-        ></a>
-        <a href="https://www.pinterest.fr/"
-          ><ion-icon name="logo-pinterest"></ion-icon
-        ></a>
-        <a href="https://www.instagram.com/"
-          ><ion-icon name="logo-instagram"></ion-icon
-        ></a>
-      </div>
-      <div id="copyright">
-        <p>&copy; 2023 Running. Tous droits réservés</p>
-      </div>
-    </footer>
-    <script src="index.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="index.js"></script>
-  </body>
+      </a>
+    </aside>
+  </section>
+  <footer>
+    <div class="social">
+      <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="https://www.pinterest.fr/"><ion-icon name="logo-pinterest"></ion-icon></a>
+      <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+    </div>
+    <div id="copyright">
+      <p>&copy; 2023 Running. Tous droits réservés</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>
