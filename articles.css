@@ -9,7 +9,7 @@
 }
 
 .galeryShoes {
-  width:100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
@@ -146,8 +146,8 @@ h3 {
   }
 
   aside {
-    width:100%;
-    margin:auto;
+    width: 100%;
+    margin: auto;
   }
 
   .btnSize {
@@ -169,8 +169,8 @@ h3 {
   }
 
   .mobileTitle {
-    width:80%;
-    margin:auto;
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,18 +196,9 @@ h3 {
     transform: none;
     transition: none;
   }
-  #addToCart {
-    width: 80%;
-  }
-
-  #addToCart:hover {
-    transition: none;
-    background-color: black;
-    border: none;
-    color: white;
-  }
 
   #addToCart {
+    font-size: 12px;
     width: 80%;
   }
 

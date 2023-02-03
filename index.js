@@ -526,9 +526,9 @@ function displayProductsInCart() {
   }
   if (localStorage.getItem("id") == null) {
     templateArticles.innerHTML = `
-  <div class="cartVide">
-    Votre panier est actuellement vide <br>
-    Continuez vos achats en <a href="femme.html"> cliquant ici ! </a>
+  <div class="cartEmpty">
+    <p>Votre panier est actuellement vide.</p>
+    <a href="index.html"><button>Continuer mes achats</button></a>
   </div>`;
     articlesSection.append(templateArticles);
   }
