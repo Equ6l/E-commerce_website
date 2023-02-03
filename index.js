@@ -802,18 +802,6 @@ function pictureColorChange(shoeColor) {
     thirdBorder.style.border = "none";
 
     images[0].src =
-      "img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp";
-    images[1].src =
-      "img/1 - Nike Air Max Terrascape Plus/Blanc/2 - Nike Air Max Terrascape Plus - dessous [Blanc].webp";
-    images[2].src =
-      "img/1 - Nike Air Max Terrascape Plus/Blanc/3 - Nike Air Max Terrascape Plus - dessus [Blanc].webp";
-    images[3].src =
-      "img/1 - Nike Air Max Terrascape Plus/Blanc/4 - Nike Air Max Terrascape Plus - coté [Blanc].webp";
-  } else if (shoeColor == 1) {
-    firstBorder.style.border = "none";
-    secondBorder.style.border = "1px solid black";
-    thirdBorder.style.border = "none";
-    images[0].src =
       "img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp";
     images[1].src =
       "img/1 - Nike Air Max Terrascape Plus/Noir/2 - Nike Air Max Terrascape Plus - Dessous[Noir].webp";
@@ -821,6 +809,18 @@ function pictureColorChange(shoeColor) {
       "img/1 - Nike Air Max Terrascape Plus/Noir/3 - Nike Air Max Terrascape Plus - dessus[Noir].webp";
     images[3].src =
       "img/1 - Nike Air Max Terrascape Plus/Noir/4 - Nike Air Max Terrascape Plus - coté [Noir].webp";
+  } else if (shoeColor == 1) {
+    firstBorder.style.border = "none";
+    secondBorder.style.border = "1px solid black";
+    thirdBorder.style.border = "none";
+    images[0].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp";
+    images[1].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/2 - Nike Air Max Terrascape Plus - dessous [Blanc].webp";
+    images[2].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/3 - Nike Air Max Terrascape Plus - dessus [Blanc].webp";
+    images[3].src =
+      "img/1 - Nike Air Max Terrascape Plus/Blanc/4 - Nike Air Max Terrascape Plus - coté [Blanc].webp";
   } else {
     firstBorder.style.border = "none";
     secondBorder.style.border = "none";
