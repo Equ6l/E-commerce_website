@@ -4,14 +4,19 @@
   width: 80%;
   display: flex;
   margin: auto;
-  padding: 60px 0 0 0;
+  padding: 60px 0;
   gap: 2em;
 }
 
 .galeryShoes {
+  width:100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
+}
+
+aside {
+  width: 50%;
 }
 
 h3 {
@@ -94,6 +99,9 @@ h3 {
 #addToCart {
   width: 100%;
   height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
   border-radius: 30px;
   border: none;
   background-color: black;
@@ -113,6 +121,7 @@ h3 {
   /* * * * * * * ARTICLE TYPE * * * * */
   #articleType {
     width: 100%;
+    padding-bottom: 0;
     flex-direction: column;
     text-align: center;
     display: grid;
@@ -136,6 +145,11 @@ h3 {
     transition: none;
   }
 
+  aside {
+    width:100%;
+    margin:auto;
+  }
+
   .btnSize {
     width: 80%;
     margin: auto;
@@ -155,13 +169,19 @@ h3 {
   }
 
   .mobileTitle {
+    width:80%;
+    margin:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1em;
+    gap: 2em;
     border-bottom: none;
+  }
+
+  .mobileTitle p {
+    text-align: justify;
   }
 
   .size h3 {
@@ -170,6 +190,11 @@ h3 {
 
   .picture img {
     width: 25%;
+  }
+
+  .picture img:hover {
+    transform: none;
+    transition: none;
   }
   #addToCart {
     width: 80%;

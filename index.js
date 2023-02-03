@@ -496,20 +496,17 @@ const availableProductsChild = [
   },
 ];
 
-let searchbar = document.querySelector("#research");
-searchbar.addEventListener("input", function () {
-  displayAvailableProducts();
-});
-
 function displayProductsInCart() {
   let articlesSection = document.querySelector("section#articles");
   articlesSection.innerHTML = "";
+  let templateArticles = document.createElement("div");
+
   for (let i = 0; i < cart.length; i++) {
-    let templateArticles = document.createElement("div");
     templateArticles.classList.add("shoes");
+
     templateArticles.innerHTML = `
     
-    <img src="./img/1 - Nike Air Max Terrascape Plus/Noir/${cart[i].img.src}" alt="${cart[i].img.alt}" />
+    <img src="./img/1 - Nike Air Max Terrascape Plus/Noir/${cart[i].img.src}" salt="${cart[i].img.alt}" />
     <div class="infos">
         <div class="title">
             <p>${cart[i].reference}</p>
@@ -524,8 +521,15 @@ function displayProductsInCart() {
     </div>
     <div class="quantity_price">
         <p><b>${cart[i].price}€</b></p>
-    </div>
-`;
+    </div>`;
+    articlesSection.append(templateArticles);
+  }
+  if (localStorage.getItem("id") == null) {
+    templateArticles.innerHTML = `
+  <div class="cartVide">
+    Votre panier est actuellement vide <br>
+    Continuez vos achats en <a href="femme.html"> cliquant ici ! </a>
+  </div>`;
     articlesSection.append(templateArticles);
   }
 }
@@ -638,13 +642,19 @@ function displayTotalAmount() {
 
 // DELETE PRODUCT CART
 function removeProductFromCart(productId) {
+  localStorage.clear();
   cart.splice(productId, 1);
   displayCart();
   displayTotalAmount();
+  displayProductsInCart();
 }
 
 // DISPLAY GALLERY PRODUCTS
 let gallery = document.querySelector(".gallery");
+let searchbar = document.querySelector("#research");
+searchbar.addEventListener("input", function () {
+  displayAvailableProducts(availableProductsMan);
+});
 
 function displayAvailableProducts(products) {
   gallery.innerHTML = "";
@@ -708,85 +718,6 @@ function updateNbArt(nbArt) {
     articleNumber.innerHTML = `<span style='font-weight:500;'>${nbArt} articles</span>`;
   }
 }
-
-// DISPLAY ARTICLE TYPE
-
-let articleType = document.querySelector("section#articleType");
-
-// function displayArticle(products) {
-// articleType.innerHTML = ``;
-// for (let i = 0; i < products.length; i++) {
-// console.log("bjr");
-// let templateArticleType = document.createElement("div");
-// templateArticleType.innerHTML = `
-//   <div class="galeryShoes">
-//   <img
-//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp"
-//     alt=""
-//   />
-//   <img
-//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/2 - Nike Air Max Terrascape Plus - dessous [Blanc].webp"
-//     alt=""
-//   />
-//   <img
-//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/3 - Nike Air Max Terrascape Plus - dessus [Blanc].webp"
-//     alt=""
-//   />
-//   <img
-//     src="img/1 - Nike Air Max Terrascape Plus/Blanc/4 - Nike Air Max Terrascape Plus - coté [Blanc].webp"
-//     alt=""
-//   />
-// </div>
-
-// <aside>
-//   <div class="titleArticle">
-//     <h2>Nike Dunk Low</h2>
-//     <p>
-//       Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec in
-//       nulla porta lorem rhoncus feugiat.
-//     </p>
-//     <p>69.99 €</p>
-//   </div>
-
-//   <div class="color">
-//     <h3>Couleurs</h3>
-//     <div class="picture">
-
-//       <img onclick ="pictureColorChange(0)"src="img/1 - Nike Air Max Terrascape Plus/Blanc/1 - Nike Air Max Terrascape Plus [Blanc].webp" alt="" />
-//       <img onclick ="pictureColorChange(1)"
-//         src="img/1 - Nike Air Max Terrascape Plus/Noir/1 - Nike Air Max Terrascape Plus [Noir].webp"
-//         alt=""
-//       />
-//       <img onclick ="pictureColorChange(2)"
-//         src="img/1 - Nike Air Max Terrascape Plus/Tricolor/1 - Nike Air Max Terrascape Plus [Tricolor].webp"
-//         alt=""
-//       />
-
-//     </div>
-//   </div>
-
-//   <div class="size">
-//     <h3>Sélectionner une taille</h3>
-//     <div class="btnSize">
-//       <button>EU 38</button>
-//       <button>EU 39</button>
-//       <button>EU 40</button>
-//       <button>EU 41</button>
-//       <button>EU 42</button>
-//       <button>EU 43</button>
-//       <button>EU 44</button>
-//       <button>EU 45</button>
-//       <button>EU 46</button>
-//       <button>EU 47</button>
-//       <button>EU 48</button>
-//       <button>EU 49</button>
-//     </div>
-//   </div>
-//   <button onclick="addProductToCart()" id="addToCart">Ajouter au panier</button>
-// </aside>`;
-// articleType.append(templateArticleType);
-// }
-// }
 
 // DISPLAY SHOE COLOR
 
